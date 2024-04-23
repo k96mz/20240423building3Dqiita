@@ -11,7 +11,7 @@ const style = {
     osmbuilding: {
       type: "vector",
       tiles: [
-        "https://k96mz.github.io/20240423building3Dqiita/docs/VTpractice/{z}/{x}/{y}.pbf",
+        "https://k96mz.github.io/20240423building3Dqiita/VTpractice/{z}/{x}/{y}.pbf",
       ],
       minzoom: 10,
       maxzoom: 17,
