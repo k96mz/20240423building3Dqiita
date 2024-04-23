@@ -14,7 +14,7 @@ const style = {
         "https://k96mz.github.io/20240423building3Dqiita/VTpractice/{z}/{x}/{y}.pbf",
       ],
       minzoom: 10,
-      maxzoom: 17,
+      maxzoom: 20,
       attribution:
         "©<a href='https://www.openstreetmap.org/copyright' target='_blank'> OpenStreetMap:</a> contributors",
     },
@@ -33,10 +33,10 @@ const style = {
       source: "osmbuilding",
       "source-layer": "building",
       minzoom: 10,
-      maxzoom: 17,
+      maxzoom: 20,
       paint: {
         "fill-extrusion-color": "#797979",
-        "fill-extrusion-height": ["get", "measuredHeight"],
+        "fill-extrusion-height": ["get", "height"],
       },
     },
   ],
@@ -45,10 +45,10 @@ const style = {
 const map = new maplibregl.Map({
   container: "map",
   style: style, // 地図のスタイル
-  center: [139.471321, 35.758044], // 中心座標
-  zoom: 16, // ズームレベル
-  bearing: -27, // 確度
-  pitch: 54, // 傾き
+  center: [139.466895, 35.760381], // 中心座標
+  zoom: 16.77, // ズームレベル
+  bearing: -30.1, // 確度
+  pitch: 50, // 傾き
   hash: true, //緯度経度表示
 });
 
@@ -57,5 +57,5 @@ map.addControl(new maplibregl.NavigationControl(), "bottom-right"); // ナビゲ
 map.addControl(new maplibregl.ScaleControl()); // スケールバー表示
 
 //debug
-map.showTileBoundaries = true;
+map.showTileBoundaries = false;
 map.showCollisionBoxes = false;
